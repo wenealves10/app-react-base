@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { primaryColor, secondaryColor } from '../config/colors';
+import * as colors from '../config/colors';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
 
@@ -12,17 +13,17 @@ export default createGlobalStyle`
 
   html, body, #root{
     height: 100vh;
-    background: ${secondaryColor};
+    background: ${colors.secondaryColor};
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     font-family: sans-serif;
-    color: ${primaryColor}
+    color: ${colors.primaryColor}
   }
 
   button{
     border: 0;
     cursor: pointer;
-    background-color: ${primaryColor};
+    background-color: ${colors.primaryColor};
     color: #fff;
     font-size: 0.8em;
     font-weight: 700;
@@ -35,7 +36,15 @@ export default createGlobalStyle`
 
   a{
     text-decoration: none;
-    color: ${primaryColor}
+    color: ${colors.primaryColor}
+  }
+
+  body .Toastify .Toastify__toast-container .Toastify__toast--success{
+    background: ${colors.successColor}
+  }
+
+  body .Toastify .Toastify__toast-container .Toastify__toast--error{
+    background: ${colors.errorColor}
   }
 
 `;
