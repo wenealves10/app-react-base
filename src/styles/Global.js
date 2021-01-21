@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { primaryColor, secondaryColor } from '../config/colors';
 
 export default createGlobalStyle`
 
@@ -11,12 +12,21 @@ export default createGlobalStyle`
 
   html, body, #root{
     height: 100vh;
-    background: #ccc;
+    background: ${secondaryColor};
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    font-family: sans-serif;
+    color: ${primaryColor}
   }
 
   button{
     border: 0;
     cursor: pointer;
+    background-color: ${primaryColor};
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 700;
+    border-radius: 4px;
   }
 
   ul{
@@ -25,6 +35,7 @@ export default createGlobalStyle`
 
   a{
     text-decoration: none;
+    color: ${primaryColor}
   }
 
 `;
