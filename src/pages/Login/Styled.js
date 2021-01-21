@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-  color: red;
+  font-size: 1.6em;
 `;
 
 export const Button = styled.button`
-  width: 50px;
-  height: 25px;
-  background: #fcc;
+  width: 100px;
+  height: 40px;
   margin-top: 18px;
   margin-bottom: 20px;
-  color: ${(props) => (props.isColor ? 'red' : 'blue')};
+  color: ${(props) => (props.isColor ? 'white' : 'blue')};
 `;
