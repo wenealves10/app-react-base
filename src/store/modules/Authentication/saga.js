@@ -1,14 +1,13 @@
-/* eslint-disable no-unused-vars */
 import { call, put, takeLatest, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import * as actionsButton from './actions';
 import * as types from '../types';
 
 const request = () =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(() => {
-      reject();
-    }, 3000);
+      resolve();
+    }, 500);
   });
 
 function* Authentication() {
