@@ -20,7 +20,7 @@ export default function Login() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch(Auth.clickButton());
+    dispatch(Auth.clickButtonRequest());
   };
 
   return (
