@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Title } from './Styled';
 import { Container } from '../../styles/Global';
 import axios from '../../services/axios';
+import * as Auth from '../../store/modules/Authentication/actions';
 
 export default function Login() {
   const dispatch = useDispatch();
-  const isColor = useSelector((state) => state.buttonClick);
+  const isColor = useSelector((state) => state.auth.buttonClick);
   React.useEffect(() => {
     async function getData() {
       const response = await axios.get();
@@ -19,9 +20,7 @@ export default function Login() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'BUTTON_CLICK',
-    });
+    dispatch(Auth.clickButton());
   };
 
   return (
